@@ -10,6 +10,8 @@ Complex Event Processing is combine data from multiple source or used to process
 <li>No notion of flow of time (Drools support notion of events, which are facts limited life time)</li>
 </ul>
 
+![Cloud Event](https://github.com/rameshpk/drools_cep/blob/master/Event.png)
+
 # Stream Event
 <ul>
 <li>In this mode, engine uses a session clock to force synchronization between stream</li>
@@ -19,3 +21,11 @@ Complex Event Processing is combine data from multiple source or used to process
     <li>Synchronizes stream form multiple source.</li>
     <li>Schedule future task.</li></ol>
 </ul>
+
+![Stream Event](https://github.com/rameshpk/drools_cep/blob/master/Stream.png)
+
+# Reference Clock (Session Clock) implementations
+
+
+
+![Clock](https://github.com/rameshpk/drools_cep/blob/master/Clock.png)
