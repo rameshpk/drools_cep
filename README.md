@@ -26,6 +26,7 @@ Complex Event Processing is combine data from multiple source or used to process
 
 To enable STREAM-mode, one can configure the _eventProcessingMode_ attribute of the 'KieBase' in the 'kmodule.xml' file:
 
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
     <kbase name="rules" equalsBehavior="equality" eventProcessingMode="stream" packages="rules">
@@ -33,6 +34,8 @@ To enable STREAM-mode, one can configure the _eventProcessingMode_ attribute of 
         <ksession name="cepConfigKsessionRealtimeClock" clockType="realtime"/>
     </kbase>
 </kmodule>
+---
+
 
 ![Stream Event](https://github.com/rameshpk/drools_cep/blob/master/image/Stream.png)
 
