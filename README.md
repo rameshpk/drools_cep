@@ -1,0 +1,21 @@
+# Drools CEP
+
+Complex Event Processing is combine data from multiple source or used to process a large stream of information and can be used for real-time event monitoring. Events can be processed in two ways, which is either in the 'stream' or in the 'cloud' mode
+
+# Event Cloud 
+<ul>
+<li>It’s default processing mode in BRMS.</li>
+<li>The engine looks at the events as an unordered cloud against which engine tries to match rule.</li>
+<li>Application must explicitly delete events when they no longer necessary.</li>
+<li>No notion of flow of time (Drools support notion of events, which are facts limited life time)</li>
+</ul>
+
+# Stream Event
+<ul>
+<li>In this mode, engine uses a session clock to force synchronization between stream</li>
+<li>Session clock is responsible for keeping the current timestamp, which help in </li>
+   <ol> <li>Determining event age.</li>
+    <li>Do temporal calculations.</li>
+    <li>Synchronizes stream form multiple source.</li>
+    <li>Schedule future task.</li></ol>
+</ul>
