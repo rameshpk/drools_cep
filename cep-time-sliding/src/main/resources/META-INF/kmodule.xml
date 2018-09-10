@@ -1,0 +1,9 @@
+<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <kbase name="cepKbase" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="org.drools.devguide.cep">
+    <ksession name="cepKsession" type="stateful" default="false" clockType="pseudo"/>
+  </kbase>
+  <kbase name="cepConfigKbase" default="false" eventProcessingMode="stream" equalsBehavior="identity" packages="org.drools.devguide.cep">
+    <ksession name="cepConfigKsessionPseudoClock" type="stateful" default="false" clockType="pseudo"/>
+    <ksession name="cepConfigKsessionRealtimeClock" type="stateful" default="false" clockType="realtime"/>
+  </kbase>
+</kmodule>
