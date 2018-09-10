@@ -1,8 +1,8 @@
-= Drools CEP
+# Drools CEP
 
 Complex Event Processing is combine data from multiple source or used to process a large stream of information and can be used for real-time event monitoring. Events can be processed in two ways, which is either in the 'stream' or in the 'cloud' mode
 
-== Event Cloud 
+# Event Cloud 
 
 <ul>
 <li>It’s default processing mode in BRMS.</li>
@@ -14,7 +14,7 @@ Complex Event Processing is combine data from multiple source or used to process
 
 ![Cloud Event](https://github.com/rameshpk/drools_cep/blob/master/image/Event.png)
 
-== Stream Event
+# Stream Event
 
 <ul>
 <li>Events in each stream must be time-ordered. I.e., inside a given stream, events that happened first must be inserted first into the engine.</li>
@@ -25,21 +25,6 @@ Complex Event Processing is combine data from multiple source or used to process
     <li>Synchronizes stream form multiple source.</li>
     <li>Schedule future task.</li></ol>
 </ul>
-
-To enable STREAM-mode, one can configure the _eventProcessingMode_ attribute of the 'KieBase' in the 'kmodule.xml' file:
-
-[source, xml]
-
----
-<?xml version="1.0" encoding="UTF-8"?>
-<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
-    <kbase name="rules" equalsBehavior="equality" eventProcessingMode="stream" packages="rules">
-        <ksession name="cepConfigKsessionPseudoClock" clockType="pseudo"/>
-        <ksession name="cepConfigKsessionRealtimeClock" clockType="realtime"/>
-    </kbase>
-</kmodule>
----
-
 
 ![Stream Event](https://github.com/rameshpk/drools_cep/blob/master/image/Stream.png)
 
