@@ -5,7 +5,7 @@
 
 # Configure Drools STREAM Mode
 
-The below configurations will enable the STREAM event processing mode
+The below configurations will enable the STREAM event processing mode and PseudoClock
 
 ```xml
 <kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
