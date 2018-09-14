@@ -92,6 +92,6 @@ Input XML  Request
 </batch-execution>
 ```
 Output
-
+![Output](https://github.com/rameshpk/drools_cep/blob/master/image/Output.png)
 
 
