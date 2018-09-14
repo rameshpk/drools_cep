@@ -61,7 +61,37 @@ then
 end 
 ```
 
-# Deploy Event Package to KIE Server
+# Deploying Event Package to Realtime Decision Server
+
+![eploying Event Package to Realtime Decision Server](https://github.com/rameshpk/drools_cep/blob/master/image/Deploy.png)
+
+# Firing rules using kie server
+
+Fie Rule Post Method : http://localhost:8080/kie-server/services/rest/server/containers/instances/cep-window-over
+
+Input XML  Request 
+```xml
+<batch-execution lookup="cepConfigKsessionPseudoClock">
+  <insert out-identifier="beat" return-object="true" >
+    <org.drools.devguide.cep.HeartBeatEvent/>
+  </insert>
+  <advance-session-time out-identifier="session-advancecurrenttime" amount="1" unit="SECONDS"/>
+    <insert out-identifier="beat" return-object="true" >
+    <org.drools.devguide.cep.HeartBeatEvent/>
+  </insert>
+  <advance-session-time out-identifier="session-advancecurrenttime" amount="1" unit="SECONDS"/>
+  <insert out-identifier="beat" return-object="true" >
+    <org.drools.devguide.cep.HeartBeatEvent/>
+  </insert>
+   <advance-session-time out-identifier="session-advancecurrenttime" amount="1" unit="SECONDS"/>
+    <insert out-identifier="beat" return-object="true" >
+    <org.drools.devguide.cep.HeartBeatEvent/>
+  </insert>
+   <advance-session-time out-identifier="session-advancecurrenttime" amount="6" unit="SECONDS"/>
+  <fire-all-rules/>
+</batch-execution>
+```
+Output
 
 
 
