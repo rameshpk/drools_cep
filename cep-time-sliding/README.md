@@ -17,8 +17,29 @@ The below configurations will enable the STREAM event processing mode
 ```
 The above file named 'kmodule.xml' is included in the META-INF of your project. Make sure you make it available in the classpath of your main class
 
+# Event role declaration 
 
+This code can reside inside a normal .drl file
 
+* @Role : Declares that the type is to be handled as an event
+* @Expire : Events may be automatically expired after some time in the working memory.
+
+```java
+import org.kie.api.definition.type.Expires;
+import org.kie.api.definition.type.Role;
+
+@Role(Role.Type.EVENT)
+@Expires("30m")
+public class HeartAttackEvent implements java.io.Serializable {
+
+    static final long serialVersionUID = 1L;
+
+    public HeartAttackEvent() {
+        super();
+    }
+}
+```
+# Deploy Event Package to KIE Server
 
 
 
