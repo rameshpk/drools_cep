@@ -19,7 +19,7 @@ The above file named 'kmodule.xml' is included in the META-INF of your project. 
 
 # Event role declaration 
 
-This code can reside inside a normal .drl file
+This code can reside inside Model class
 
 * @Role : Declares that the type is to be handled as an event
 * @Expire : Events may be automatically expired after some time in the working memory.
@@ -39,6 +39,28 @@ public class HeartAttackEvent implements java.io.Serializable {
     }
 }
 ```
+# CEP Time Sliding Rule 
+If there is No heart beat in the last 5 seconds, Know the Symptoms of a Heart Attack.
+```DRL
+package org.drools.devguide.cep;
+
+import org.drools.devguide.cep.HeartAttackEvent;
+import org.drools.devguide.cep.HeartBeatEvent;
+
+rule "No heart beat in the last 5 seconds!"
+
+when
+    not (
+            HeartBeatEvent()
+            over windows:time(5s)
+        )
+then 
+    System.out.println("===HeartAttack Fired====");
+    insert (new HeartAttackEvent());
+    drools.halt();
+end 
+```
+
 # Deploy Event Package to KIE Server
 
 
