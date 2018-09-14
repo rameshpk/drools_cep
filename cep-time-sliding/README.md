@@ -67,7 +67,7 @@ end
 
 # Firing rules using kie server
 
-Fie Rule Post Method : http://localhost:8080/kie-server/services/rest/server/containers/instances/cep-window-over
+Fire Rule Post Method : http://localhost:8080/kie-server/services/rest/server/containers/instances/cep-window-over
 
 Input XML  Request 
 ```xml
