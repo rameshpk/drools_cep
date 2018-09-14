@@ -55,7 +55,7 @@ when
             over windows:time(5s)
         )
 then 
-    System.out.println("===HeartAttack Fired====");
+    System.out.println("===Know the Symptoms of a Heart Attack====");
     insert (new HeartAttackEvent());
     drools.halt();
 end 
