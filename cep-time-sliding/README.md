@@ -91,7 +91,13 @@ Input XML  Request
   <fire-all-rules/>
 </batch-execution>
 ```
+We manually advance time 6 minute, without a heart beat
+```xml
+<advance-session-time out-identifier="session-advancecurrenttime" amount="6" unit="SECONDS"/>
+```
+
 Output
+
 ![Output](https://github.com/rameshpk/drools_cep/blob/master/image/Output.png)
 
 
